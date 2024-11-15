@@ -122,3 +122,4 @@ int32_t main()
       vis[i]=0;
     }
   }
+// https://codeforces.com/gym/102694/problem/C
