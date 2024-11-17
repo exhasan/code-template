@@ -96,3 +96,4 @@ int32_t main()
     }
 }
 // https://www.spoj.com/problems/FREQ2/
+//https://codeforces.com/problemset/problem/86/D
