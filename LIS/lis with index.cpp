@@ -37,5 +37,6 @@ int main()
     vector<int> LIS_elements=LIS(vat);
     cout<<LIS_elements.size()<<endl;
      for(auto x: LIS_elements) cout<<x<<' '; cout<<endl;
-    return 0;
+    return 0; 
+    
 }
