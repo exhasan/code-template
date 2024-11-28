@@ -28,16 +28,12 @@ int main()
     int n,m;
     cin>>n>>m;
     adj.resize(n+2);
-    int ar[n+2][n+2];
-    memset(ar,0,sizeof(ar));
     for(int i=1;i<=m;i++)
     {
         int x,y;
         cin>>x>>y;
         adj[x].push_back(y);
         adj[y].push_back(x);
-        ar[x][y]=1;
-        ar[y][x]=1;
     }
     for(int i=1;i<=n;i++)
     {
