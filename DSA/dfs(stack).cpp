@@ -1,45 +1,47 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int vis[100];
- vector<vector<int>>adj;
-void dfs(int n)
+vector<vector<int>> adj;
+void dfs(int start)
 {
-  stack<int>st;
-  st.push(n);
-  vis[n]=1;
-  while(!st.empty())
-  {
-     int u = st.top();
-     cout<<u<<' ';
-     st.pop();
-     for(auto x: adj[u])
-     {
-         if(vis[x]==0)
-         {
-            st.push(x);
-            vis[x]=1;
-         }
-     }
-  }
+    stack<int> st;
+    st.push(start);
+    vis[start] = 1;
+    while (!st.empty())
+    {
+        int parent = st.top();
+        cout << parent << ' ';
+        st.pop();
+        for (auto child : adj[parent])
+        {
+            if (vis[child] == 0)
+            {
+                st.push(child);
+                vis[child] = 1;
+            }
+        }
+    }
 }
 int main()
 {
-    int n,m;
-    cin>>n>>m;
-    adj.resize(n+2);
-    for(int i=1;i<=m;i++)
+    int node, edge;
+    cin >> node >> edge;
+    adj.resize(node + 2);
+    for (int i = 1; i <= edge; i++)
     {
-        int x,y;
-        cin>>x>>y;
+        int x, y;
+        cin >> x >> y;
         adj[x].push_back(y);
         adj[y].push_back(x);
     }
-    for(int i=1;i<=n;i++)
+    for (int i = 1; i <= node; i++)
     {
-        cout<<i<<"->"<<' ';
-        for(auto x: adj[i]) cout<<x<<' '; cout<<endl;
+        cout << i << "->" << ' ';
+        for (auto x : adj[i])
+            cout << x << ' ';
+        cout << endl;
     }
-    cout<<endl;
+    cout << endl;
     dfs(1);
 }
