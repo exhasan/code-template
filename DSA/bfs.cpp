@@ -5,19 +5,19 @@ int vis[100];
 vector<vector<int>> adj;
 void dfs(int start)
 {
-    queue<int> st;
-    st.push(start);
+    queue<int>qu;
+    qu.push(start);
     vis[start] = 1;
-    while (!st.empty())
+    while (!qu.empty())
     {
-        int parent = st.front();
+        int parent = qu.front();
         cout << parent << ' ';
-        st.pop();
+        qu.pop();
         for (auto child : adj[parent])
         {
             if (vis[child] == 0)
             {
-                st.push(child);
+                qu.push(child);
                 vis[child] = 1;
             }
         }
