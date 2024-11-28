@@ -5,7 +5,7 @@ int vis[100];
 vector<vector<int>> adj;
 void dfs(int start)
 {
-    queue<int>qu;
+    queue<int> qu;
     qu.push(start);
     vis[start] = 1;
     while (!qu.empty())
