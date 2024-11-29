@@ -81,3 +81,4 @@ int32_t main()
         solve();
     }
 }
+// https://codeforces.com/gym/100753/attachments/download/3533/2015-german-collegiate-programming-contest-gcpc-15-en.pdf
