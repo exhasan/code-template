@@ -42,7 +42,6 @@ void power(int A[][N], int n, int p)
                 I[i][j] = 0;
         }
     }
-
     while (p)
     {
         if (p % 2 == 1)
@@ -56,7 +55,6 @@ void power(int A[][N], int n, int p)
             p /= 2;
         }
     }
-
     for (i = 1; i <= n; i++)
     {
         for (j = 1; j <= n; j++)
@@ -79,3 +77,4 @@ int32_t main()
     power(ar, 2, n);
     cout << ar[1][1] << endl;
 }
+// // https://codeforces.com/gym/102644/problem/C
